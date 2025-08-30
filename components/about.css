@@ -1,0 +1,219 @@
+/* About Page Specific Styles */
+
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 100%);
+}
+
+/* About Header Section */
+.about-header {
+  background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 50%, #81c784 100%);
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.about-header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-header__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-header__description {
+  font-size: 1.25rem;
+  color: #1b5e20;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Video Section */
+.about-video {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.about-video__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-video__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-video__wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.about-video__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Team Section */
+.about-team {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+}
+
+.about-team__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-team__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-team__grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Team Card */
+.team-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  max-width: 300px;
+  width: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #4caf50;
+}
+
+.team-card__content {
+  position: relative;
+}
+
+.team-card__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.team-card__role {
+  font-size: 1rem;
+  color: #4caf50;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.team-card__title {
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Active Navigation Link */
+.navbar__link--active {
+  color: #4caf50 !important;
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #4caf50;
+  border-radius: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-header {
+    padding: 100px 0 60px;
+  }
+
+  .about-header__title {
+    font-size: 2.5rem;
+  }
+
+  .about-header__description {
+    font-size: 1.1rem;
+  }
+
+  .about-video,
+  .about-team {
+    padding: 60px 0;
+  }
+
+  .about-team__title {
+    font-size: 2rem;
+  }
+
+  .team-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header__title {
+    font-size: 2rem;
+  }
+
+  .about-header__description {
+    font-size: 1rem;
+  }
+
+  .about-team__title {
+    font-size: 1.75rem;
+  }
+}

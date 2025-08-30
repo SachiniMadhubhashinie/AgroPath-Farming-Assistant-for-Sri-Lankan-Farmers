@@ -1,0 +1,280 @@
+/* Import home navbar styles */
+@import url("./home.css");
+
+.disease-detection-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 100%);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.disease-detection__main {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.disease-detection__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.disease-detection__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.disease-detection__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d5016;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.disease-detection__subtitle {
+  font-size: 1.2rem;
+  color: #4a7c59;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.disease-detection__upload-section {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.disease-detection__upload-area {
+  width: 100%;
+  max-width: 600px;
+  min-height: 300px;
+  border: 3px dashed #7cb342;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.disease-detection__upload-area:hover,
+.disease-detection__upload-area.drag-active {
+  border-color: #558b2f;
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 179, 66, 0.15);
+}
+
+.disease-detection__upload-area.has-file {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.05);
+}
+
+.disease-detection__upload-icon {
+  width: 64px;
+  height: 64px;
+  color: #7cb342;
+  margin-bottom: 20px;
+}
+
+.disease-detection__upload-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d5016;
+  margin-bottom: 8px;
+}
+
+.disease-detection__upload-subtext {
+  font-size: 1rem;
+  color: #4a7c59;
+  margin-bottom: 24px;
+}
+
+.disease-detection__file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.disease-detection__upload-button {
+  background: linear-gradient(135deg, #7cb342 0%, #558b2f 100%);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(124, 179, 66, 0.3);
+}
+
+.disease-detection__upload-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 179, 66, 0.4);
+}
+
+.disease-detection__file-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.disease-detection__file-icon {
+  width: 48px;
+  height: 48px;
+  color: #4caf50;
+}
+
+.disease-detection__file-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d5016;
+  text-align: center;
+  word-break: break-word;
+}
+
+.disease-detection__analyze-button {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.disease-detection__analyze-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.disease-detection__tips-section {
+  text-align: center;
+}
+
+.disease-detection__tips-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d5016;
+  margin-bottom: 48px;
+}
+
+.disease-detection__tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.disease-detection__tip-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(124, 179, 66, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.disease-detection__tip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(124, 179, 66, 0.15);
+  border-color: rgba(124, 179, 66, 0.3);
+}
+
+.disease-detection__tip-icon {
+  width: 48px;
+  height: 48px;
+  color: #7cb342;
+  margin: 0 auto 20px;
+}
+
+.disease-detection__tip-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2d5016;
+  margin-bottom: 12px;
+}
+
+.disease-detection__tip-description {
+  font-size: 1rem;
+  color: #4a7c59;
+  line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .disease-detection__main {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .disease-detection__container {
+    padding: 0 16px;
+  }
+
+  .disease-detection__title {
+    font-size: 2.2rem;
+  }
+
+  .disease-detection__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .disease-detection__upload-area {
+    min-height: 250px;
+    padding: 30px 20px;
+  }
+
+  .disease-detection__upload-text {
+    font-size: 1.3rem;
+  }
+
+  .disease-detection__tips-title {
+    font-size: 2rem;
+  }
+
+  .disease-detection__tips-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .disease-detection__tip-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .disease-detection__title {
+    font-size: 1.8rem;
+  }
+
+  .disease-detection__upload-area {
+    min-height: 200px;
+    padding: 24px 16px;
+  }
+
+  .disease-detection__upload-text {
+    font-size: 1.1rem;
+  }
+
+  .disease-detection__tips-title {
+    font-size: 1.6rem;
+  }
+}
